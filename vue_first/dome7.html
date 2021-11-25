@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--解决闪烁问题-->
+
+</head>
+<body>
+
+<div id="app">
+    <div>
+        {{info.address.city}}
+        {{info.name}}
+    </div>
+    <a :href="info.url">点我</a>
+
+</div>
+
+
+<!--导入Vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<!--导入axios-->
+<script src="https://unpkg.zhimg.com/axios/dist/axios.min.js"></script>
+
+<script type="text/javascript">
+var vm = new Vue({
+    el:'#app',
+    data(){
+        return{
+            //请求返回的参数必须一致
+            info:{
+                name:null,
+                address:{
+                    city:null,
+                    country:null
+                },
+                url:null
+            }
+        }
+    },
+    mounted(){
+        axios.get('./data.json').then(response=>(this.info=response.data));
+    }
+})
+
+
+</script>
+
+</body>
+</html>
