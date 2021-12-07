@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+	  <
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
@@ -22,7 +20,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #b6c0ca;
+  color: rgba(182, 192, 202, 0);
   margin-top: 60px;
 }
 </style>
